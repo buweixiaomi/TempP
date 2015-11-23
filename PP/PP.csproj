@@ -42,7 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Core\Border.cs" />
     <Compile Include="Core\IIconable.cs" />
+    <Compile Include="Core\IPC.cs" />
+    <Compile Include="Core\Margin.cs" />
+    <Compile Include="Core\Padding.cs" />
     <Compile Include="Core\PcBase.cs" />
     <Compile Include="FrmDp.cs">
       <SubType>Form</SubType>

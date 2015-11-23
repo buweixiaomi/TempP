@@ -29,6 +29,7 @@ namespace PP.Core
             g.DrawString("Abc", new Font(_defautfont.FontFamily, 20, FontStyle.Regular, GraphicsUnit.Pixel), Brushes.Black, new PointF(6, 17));
             g.Dispose();
             _icon = bt;
+            IList<string> tt = null;
         }
         #endregion
 
