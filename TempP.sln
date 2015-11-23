@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TempP", "TempP\TempP.csproj", "{2B3350A6-3910-4B8A-BDF9-11C3665212E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PP", "PP\PP.csproj", "{0F4C4F4A-54B6-472A-AAB1-8BE1270B21EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B3350A6-3910-4B8A-BDF9-11C3665212E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B3350A6-3910-4B8A-BDF9-11C3665212E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B3350A6-3910-4B8A-BDF9-11C3665212E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B3350A6-3910-4B8A-BDF9-11C3665212E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F4C4F4A-54B6-472A-AAB1-8BE1270B21EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F4C4F4A-54B6-472A-AAB1-8BE1270B21EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F4C4F4A-54B6-472A-AAB1-8BE1270B21EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F4C4F4A-54B6-472A-AAB1-8BE1270B21EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

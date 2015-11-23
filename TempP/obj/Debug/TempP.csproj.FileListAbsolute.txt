@@ -1,0 +1,10 @@
+E:\Work\TempP\TempP\bin\Debug\TempP.exe
+E:\Work\TempP\TempP\bin\Debug\TempP.pdb
+E:\Work\TempP\TempP\obj\Debug\TempP.csprojResolveAssemblyReference.cache
+E:\Work\TempP\TempP\obj\Debug\TempP.Form1.resources
+E:\Work\TempP\TempP\obj\Debug\TempP.Properties.Resources.resources
+E:\Work\TempP\TempP\obj\Debug\TempP.csproj.GenerateResource.Cache
+E:\Work\TempP\TempP\obj\Debug\TempP.exe
+E:\Work\TempP\TempP\obj\Debug\TempP.pdb
+E:\Work\TempP\TempP\bin\Debug\PP.dll
+E:\Work\TempP\TempP\bin\Debug\PP.pdb

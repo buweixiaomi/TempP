@@ -1,0 +1,7 @@
+E:\Work\TempP\PP\bin\Debug\PP.dll
+E:\Work\TempP\PP\bin\Debug\PP.pdb
+E:\Work\TempP\PP\obj\Debug\PP.csprojResolveAssemblyReference.cache
+E:\Work\TempP\PP\obj\Debug\PP.FrmDp.resources
+E:\Work\TempP\PP\obj\Debug\PP.csproj.GenerateResource.Cache
+E:\Work\TempP\PP\obj\Debug\PP.dll
+E:\Work\TempP\PP\obj\Debug\PP.pdb
