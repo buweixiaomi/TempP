@@ -9,5 +9,8 @@ namespace PP.Core
     public interface IPC
     {
         Size BSize { get; }
+        Padding padding { get; set; }
+        Margin margin { get; set; }
+
     }
 }

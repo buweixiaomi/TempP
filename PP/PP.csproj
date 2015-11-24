@@ -46,20 +46,55 @@
     <Compile Include="Core\IIconable.cs" />
     <Compile Include="Core\IPC.cs" />
     <Compile Include="Core\Margin.cs" />
+    <Compile Include="Core\MoveLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\MoveLine.Designer.cs">
+      <DependentUpon>MoveLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\MyRectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\MyRectControl.designer.cs">
+      <DependentUpon>MyRectControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Core\Padding.cs" />
-    <Compile Include="Core\PcBase.cs" />
+    <Compile Include="Core\PcBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\PEnums.cs" />
     <Compile Include="FrmDp.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmDp.Designer.cs">
       <DependentUpon>FrmDp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pc\TextBlock.cs" />
+    <Compile Include="Pc\RepateTemplate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pc\TableGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pc\TextBlock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Core\MoveLine.resx">
+      <DependentUpon>MoveLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\MyRectControl.resx">
+      <DependentUpon>MyRectControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDp.resx">
       <DependentUpon>FrmDp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pc\RepateTemplate.resx">
+      <DependentUpon>RepateTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pc\TextBlock.resx">
+      <DependentUpon>TextBlock.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
