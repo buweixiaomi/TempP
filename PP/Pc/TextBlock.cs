@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -20,6 +19,7 @@ namespace PP.Pc
         {
             string t = string.IsNullOrEmpty(_text) ? "请输入文本内容" : _text;
             e.Graphics.DrawString(t, this.Font, Brushes.Black, new PointF(1, 1));
+            base.OnPaint(e);
         }
         protected override void OnPaintBackground(System.Windows.Forms.PaintEventArgs e)
         {

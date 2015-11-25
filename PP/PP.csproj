@@ -5,12 +5,13 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0F4C4F4A-54B6-472A-AAB1-8BE1270B21EC}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PP</RootNamespace>
     <AssemblyName>PP</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -28,6 +29,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -69,6 +73,9 @@
     <Compile Include="FrmDp.Designer.cs">
       <DependentUpon>FrmDp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pc\PPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Pc\RepateTemplate.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -78,6 +85,7 @@
     <Compile Include="Pc\TextBlock.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -90,6 +98,9 @@
     <EmbeddedResource Include="FrmDp.resx">
       <DependentUpon>FrmDp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pc\PPanel.resx">
+      <DependentUpon>PPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pc\RepateTemplate.resx">
       <DependentUpon>RepateTemplate.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,7 +108,9 @@
       <DependentUpon>TextBlock.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

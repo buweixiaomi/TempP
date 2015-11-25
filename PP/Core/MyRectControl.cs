@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Data;
-using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
@@ -97,16 +96,16 @@ namespace PP.Core
                     continue;
                 var tr = c.Bounds;
                 ps.Add(new Point(tr.X, tr.Y));
-                ps.Add(new Point(tr.X + tr.Width + 1, tr.Y + tr.Height + 1));
-                ps.Add(new Point(tr.X + tr.Width + 1, tr.Y));
-                ps.Add(new Point(tr.X, tr.Y + tr.Height + 1));
+                ps.Add(new Point(tr.X + tr.Width, tr.Y + tr.Height));
+                ps.Add(new Point(tr.X + tr.Width, tr.Y));
+                ps.Add(new Point(tr.X, tr.Y + tr.Height));
             }
             List<Point> thispoint = new List<Point>();
             var thisrec = currentControl.Bounds;
             thispoint.Add(new Point(thisrec.X, thisrec.Y));
-            thispoint.Add(new Point(thisrec.X, thisrec.Y + thisrec.Height + 1));
-            thispoint.Add(new Point(thisrec.X + thisrec.Width + 1, thisrec.Y));
-            thispoint.Add(new Point(thisrec.X + thisrec.Width + 1, thisrec.Y + thisrec.Height + 1));
+            thispoint.Add(new Point(thisrec.X, thisrec.Y + thisrec.Height));
+            thispoint.Add(new Point(thisrec.X + thisrec.Width, thisrec.Y));
+            thispoint.Add(new Point(thisrec.X + thisrec.Width, thisrec.Y + thisrec.Height));
             List<MoveLine> newlist = new List<MoveLine>();
             foreach (var currp in thispoint)
             {
@@ -130,7 +129,7 @@ namespace PP.Core
             {
                 foreach (var b in willlines)
                 {
-                   
+
                     if (a.ISSameLine(b.point1, b.point2))
                     {
                         remove.Add(a);

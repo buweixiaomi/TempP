@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace PP
@@ -18,31 +18,35 @@ namespace PP
 
         private void FrmDp_Load(object sender, EventArgs e)
         {
-            //List<Core.PcBase> pcs = new List<Core.PcBase>();
-            //pcs.Add(new Core.PcBase());
-            //foreach (var a in pcs)
-            //{
-            //    PictureBox pcx = new PictureBox();
-            //    pcx.Location = new Point(10, 10);
-            //    pcx.Width = 50;
-            //    pcx.Height = 50;
-            //    pcx.SizeMode = PictureBoxSizeMode.StretchImage;
-            //    pcx.Image = a.Icon;
-            //    panel1.Controls.Add(pcx);
-            //}
+
+            Pc.PPanel p = new Pc.PPanel();
+            p.Location = new Point(5, 5);
+            p.Dock = DockStyle.Fill;
+            this.Controls.Add(p);
+         //   p.Click += c_MouseEnter;
+            for (int i = 0; i < 2; i++)
+            {
+                var x = new Pc.TextBlock();
+                x.floattype = Core.FloatType.Right;
+                Random r = new Random();
+                x.Width = r.Next(30, 400);
+                Thread.Sleep(20);
+                x.Height = r.Next(40, 200);
+                p.AddC(x);
+              //  p.Click += c_MouseEnter;
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var x  =new Pc.TextBlock();
 
-            panel1.Controls.Add(x);
 
-            x.Click += c_MouseEnter;
+
         }
 
         PP.Core.MyRectControl resizemycontr = null;
-    
+
 
         void c_MouseEnter(object sender, EventArgs e)
         {
