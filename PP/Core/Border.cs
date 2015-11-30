@@ -15,7 +15,20 @@ namespace PP.Core
     public struct BorderItem
     {
         public Color color { get; set; }
-        public int width { get; set; }
+        private int _width;
+        public int width
+        {
+            get
+            {
+                if (style == BorderStyle.None)
+                    return 0;
+                return _width;
+            }
+            set
+            { 
+                    _width = value;
+            }
+        }
         public BorderStyle style { get; set; }
     }
 

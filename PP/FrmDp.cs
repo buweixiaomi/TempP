@@ -24,18 +24,19 @@ namespace PP
             p.Dock = DockStyle.Fill;
             this.Controls.Add(p);
          //   p.Click += c_MouseEnter;
-            for (int i = 0; i < 2; i++)
+            List<PP.Core.PcBase> listcs = new List<Core.PcBase>();
+            for (int i = 0; i < 5000; i++)
             {
                 var x = new Pc.TextBlock();
                 x.floattype = Core.FloatType.Right;
                 Random r = new Random();
                 x.Width = r.Next(30, 400);
-                Thread.Sleep(20);
+                //Thread.Sleep(20);
                 x.Height = r.Next(40, 200);
-                p.AddC(x);
-              //  p.Click += c_MouseEnter;
-
+                listcs.Add(x);
+               p.Click += c_MouseEnter;
             }
+            p.AddRangeC(listcs);
         }
 
         private void button1_Click(object sender, EventArgs e)

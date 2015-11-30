@@ -67,7 +67,7 @@ namespace PP.Core
                         width_right = 0;
                         height_right = 0;
                     }
-                    x.Location = new System.Drawing.Point(this.OuterSize.Width - (this.OuterSize.Width - thisinnsersize.Width) - (x.OuterSize.Width - x.InnerSize.Width) - width_left, x.OuterSize.Height - x.InnerSize.Height + beforehight_left + (this.OuterSize.Height - thisinnsersize.Height));
+                    x.Location = new System.Drawing.Point(this.OuterSize.Width - (this.padding.right + x.margin.right + x.border.right.width + x.Width + width_right), x.OuterSize.Height - x.InnerSize.Height + beforehight_right + (this.OuterSize.Height - thisinnsersize.Height));
 
                     width_right += x.OuterSize.Width;
                     if (x.OuterSize.Height > height_right)
@@ -81,11 +81,20 @@ namespace PP.Core
             }
         }
 
+
         public void AddC(PcBase c)
         {
             ccontrols.Add(c);
             Sort();
             this.Controls.Add(c);
+        }
+
+        public void AddRangeC(List<PcBase> cs)
+        {
+            ccontrols.AddRange(cs);
+            Sort();
+            this.Controls.AddRange(cs.ToArray());
+
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -112,7 +121,7 @@ namespace PP.Core
         {
             get
             {
-                int width = this.Width + margin.left + margin.right + (border.right.style == Core.BorderStyle.None ? 0 : border.left.width) + (border.right.style == Core.BorderStyle.None ? 0 : border.right.width);
+                int width = this.Width + margin.left + margin.right + border.right.width + border.left.width;
                 int height = this.Height;
                 if (sizeauto && !designmode)
                 {
