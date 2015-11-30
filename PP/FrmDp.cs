@@ -23,18 +23,18 @@ namespace PP
             p.Location = new Point(5, 5);
             p.Dock = DockStyle.Fill;
             this.Controls.Add(p);
-         //   p.Click += c_MouseEnter;
+            //   p.Click += c_MouseEnter;
             List<PP.Core.PcBase> listcs = new List<Core.PcBase>();
-            for (int i = 0; i < 5000; i++)
+            for (int i = 0; i < 20; i++)
             {
                 var x = new Pc.TextBlock();
-                x.floattype = Core.FloatType.Right;
-                Random r = new Random();
+                Random r = new Random(Guid.NewGuid().ToString().GetHashCode());
                 x.Width = r.Next(30, 400);
+                x.floattype = (Core.FloatType)r.Next(0, 3);
                 //Thread.Sleep(20);
                 x.Height = r.Next(40, 200);
                 listcs.Add(x);
-               p.Click += c_MouseEnter;
+                p.Click += c_MouseEnter;
             }
             p.AddRangeC(listcs);
         }
