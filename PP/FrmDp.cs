@@ -34,7 +34,7 @@ namespace PP
                 //Thread.Sleep(20);
                 x.Height = r.Next(40, 200);
                 listcs.Add(x);
-                p.Click += c_MouseEnter;
+                x.Click += c_MouseEnter;
             }
             p.AddRangeC(listcs);
         }
